@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<default sync-j="2"/>
+
+	<remote fetch="https://git.yoctoproject.org" name="yocto"/>
+	<remote fetch="https://git.openembedded.org" name="oe"/>
+	<remote fetch="https://github.com/renesas-rz" name="renesas"/>
+	<remote fetch="https://git.yoctoproject.org" name="gplv2"/>
+	<remote fetch="https://github.com/meta-qt5" name="qt5"/>
+	<remote fetch="https://github.com/SoMLabs" name="somlabs"/>
+
+	<project name="poky" path="poky" remote="yocto" revision="ce0958de422484e73694a82ba16cb20e5829ea87"/>
+	<project name="meta-openembedded" path="meta-openembedded" remote="oe" revision="ec978232732edbdd875ac367b5a9c04b881f2e19"/>
+	<project name="meta-renesas" path="meta-renesas" remote="renesas" revision="44148f2fd4d94d3fb9f888df7540c4f8075b4d7f"/>
+	<project name="meta-gplv2" path="meta-gplv2" remote="gplv2" revision="60b251c25ba87e946a0ca4cdc8d17b1cb09292ac"/>
+	<project name="meta-qt5" path="meta-qt5" remote="qt5" revision="c1b0c9f546289b1592d7a895640de103723a0305"/>
+	<project name="renesas-meta-somlabs" path="meta-somlabs" remote="somlabs" revision="dunfell-3.0.3">
+		<linkfile src="somlabs-setup-release.sh" dest="somlabs-setup-release.sh"/>
+	</project>
+
+</manifest>
+
