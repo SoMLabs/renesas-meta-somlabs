@@ -10,16 +10,12 @@ This layer should be used in order to build the system image. This layer adds a 
 
 ## Building the system image
 
-The general description of the building process is described in the Renesas Yocto Start-Up Guide document:
-
-https://www.renesas.com/eu/en/document/mas/rzg2-group-yocto-recipe-start-guide-vlp-v300
-
 The summary of required steps including the meta-somlabs layer and helper scripts shown below:
 
 ```shell
 mkdir renesas-yocto-dunfell
 cd renesas-yocto-dunfell
-repo init -u https://github.com/SoMLabs/renesas-meta-somlabs -b dunfell-3.0.3 -m renesas-somlabs-dunfell-3.0.3.xml
+repo init -u https://github.com/SoMLabs/renesas-meta-somlabs -b dunfell-3.0.5 -m renesas-somlabs-dunfell-3.0.5.xml
 repo sync
 ```
 
