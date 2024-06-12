@@ -1,6 +1,6 @@
 KERNEL_URL = "git://github.com/SoMLabs/somlabs-rz_linux-cip.git"
-BRANCH = "rz-5.10-cip36-somlabs"
-SRCREV = "1cd7037e7591942f4d15448e8bbb2ed96adb8f56"
+BRANCH = "rz-5.10-cip41-somlabs"
+SRCREV = "b401277b334071b9f15bedf9320a74bbcbb175e3"
 
 SRC_URI = "${KERNEL_URL};protocol=https;nocheckout=1;branch=${BRANCH}"
 

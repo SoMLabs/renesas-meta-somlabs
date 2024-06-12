@@ -15,7 +15,7 @@ The summary of required steps including the meta-somlabs layer and helper script
 ```shell
 mkdir renesas-yocto-dunfell
 cd renesas-yocto-dunfell
-repo init -u https://github.com/SoMLabs/renesas-meta-somlabs -b dunfell-3.0.5 -m renesas-somlabs-dunfell-3.0.5.xml
+repo init -u https://github.com/SoMLabs/renesas-meta-somlabs -b dunfell-3.0.6 -m renesas-somlabs-dunfell-3.0.6.xml
 repo sync
 ```
 
@@ -37,10 +37,21 @@ The somlabs-setup-release.sh script creates the build directory and initializes 
 source poky/oe-init-build-env <BUILD_DIRECTORY>
 ```
 
+In case of missing packages, the full offline packages archive may be downloaded from here:
+* https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rz-mpus/rzg2lc-general-purpose-mcus-dual-core-arm-cortex-a55-12-ghz-cpus-and-single-core-arm-cortex-m33-200-mhz-cpu#design_development
+
+The graphics and video codec support as well as Chromium browser package are also available to download from renesas.com website:
+* https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rz-arm-based-high-end-32-64-bit-mpus/rzg2l-mali-graphic-library-evaluation-version#Download
+* https://www.renesas.com/us/en/software-tool/rz-mpu-video-codec-library-evaluation-version-rzg2l#tools_support
+* https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rz-mpus/rzg2l-general-purpose-microprocessors-dual-core-arm-cortex-a55-12-ghz-cpus-and-single-core-arm-cortex-m33
+* https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rz-arm-based-high-end-32-64-bit-mpus/rz-mpu-graphics-library-evaluation-version-rzv2l
+* https://www.renesas.com/us/en/products/microcontrollers-microprocessors/rz-arm-based-high-end-32-64-bit-mpus/rz-mpu-video-codec-library-evaluation-version-rzv2l#tools_support
+
 The output files are created in the build subdirectory <BUILD_DIRECTORY>/tmp/deploy/images/<SELECTED_MACHINE>:
 
 * bl2_bp-<SELECTED_MACHINE>.bin - first stage loader binary
 * fip-<SELECTED_MACHINE>.bin - bootloader binary
+* boot-<SELECTED_MACHINE>.img - boot partition image containing bl2_bp* and fip* binaries
 * somlabs-image-<SELECTED_MACHINE>.wic.bz2 - compressed system image
 
 

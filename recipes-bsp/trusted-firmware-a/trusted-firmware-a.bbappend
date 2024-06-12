@@ -1,11 +1,10 @@
-BRANCH = "v2.9/rz-somlabs"
+BRANCH = "v2.7/rz-somlabs"
 
 SRC_URI = " \
         git://github.com/SoMLabs/somlabs-rzg_trusted-firmware-a.git;branch=${BRANCH};protocol=https \
-        git://github.com/ARMmbed/mbedtls.git;branch=${BRANCH_mbedtls};name=mbedtls;destsuffix=mbedtls \
 "
 
-SRCREV = "39ef8e8a48ba5077d10f1a478160533816a6df58"
+SRCREV = "47b6c61c53b74a58924770f50e9f393770d7d429"
 
 PLATFORM_visionsom-g2l-cb = "g2l"
 EXTRA_FLAGS_visionsom-g2l-cb = "BOARD=somlabs_x2l_1gb"
